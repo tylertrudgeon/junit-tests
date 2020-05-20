@@ -12,30 +12,30 @@ public class Student {
         System.out.println(Tyler.getName());
     }
 
-    public static String studentName = "";
-    public static Long studentID = 0L;
-    public static ArrayList<Integer> grades;
+    public String studentName;
+    public Long studentID;
+    public ArrayList<Integer> grades;
 
 
     public Student(String studentName, Long studentID) {
-        Student.studentName = studentName;
-        Student.studentID = studentID;
-        Student.grades = new ArrayList<>();
+        this.studentName = studentName;
+        this.studentID = studentID;
+        this.grades = new ArrayList<>();
     }
 
     // returns the student's id
     public long getId() {
-        return Student.studentID;
+        return this.studentID;
     }
 
     // returns the student's name
     public String getName() {
-        return Student.studentName;
+        return this.studentName;
     }
 
     // adds the given grade to the grades list
     public void addGrade(int grade) {
-        Student.grades.add(grade);
+        this.grades.add(grade);
     }
 
     //returns the average of the students grades
@@ -43,7 +43,7 @@ public class Student {
         int gradeAvg = 0;
         for (int gradeD : grades) {
             gradeAvg += gradeD;
-        } return gradeAvg / Student.grades.size();
+        } return gradeAvg / this.grades.size();
     }
 
     public boolean contains (Integer grade) {

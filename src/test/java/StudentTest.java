@@ -11,16 +11,9 @@ public class StudentTest {
 
     @Before
     public void setup(){
-        Student.grades = new ArrayList<>();
         withGrade = new Student("Bill", 456789L);
         withGrade.addGrade(85);
         withGrade.addGrade(87);
-    }
-
-    @Test
-    public void checkStudentName(){
-        assertEquals("Bill", Student.studentName);
-        assertNotEquals("Tyler", Student.studentName);
     }
 
     @Test
