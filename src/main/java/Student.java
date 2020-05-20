@@ -39,9 +39,9 @@ public class Student {
     }
 
     //returns the average of the students grades
-    public double getGradeAverage() {
-        double gradeAvg = 0;
-        for (double gradeD : grades) {
+    public int getGradeAverage() {
+        int gradeAvg = 0;
+        for (int gradeD : grades) {
             gradeAvg += gradeD;
         } return gradeAvg / Student.grades.size();
     }
